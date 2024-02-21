@@ -8,12 +8,12 @@ class Solution {
     HashMap<Character, Integer> charMap = new HashMap<>();
     for (Character cOnS : s.toCharArray()) {
       int existingValue = charMap.getOrDefault(cOnS, 0);
-      charMap.put(cOnS, existingValue++);
+      charMap.put(cOnS, ++existingValue);
     }
 
     for (Character cOnT : t.toCharArray()) {
       int existingValue = charMap.getOrDefault(cOnT, 1);
-      charMap.put(cOnT, existingValue--);
+      charMap.put(cOnT, --existingValue);
     }
 
     for (Integer valueOnMap : charMap.values()) {
